@@ -25,7 +25,7 @@ SECRET_KEY = 'qnw1^#(iq!9gh#4z2zdf)hylorrw^y&oq3yap7epjb3=$@y-z@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['flashap.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['flassh.herokuapp.com','127.0.0.1']
 
 
 # Application definition
