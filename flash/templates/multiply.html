@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block 'content' %}
+<center>
+
+{%if myanswer%}
+    <br/>
+    <div class="alert alert-{{color}} alert-dismissible fade show" role="alert">
+    <strong>{{myanswer}}</strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+{%endif%}
+  
+<h1><img src="static/image/{{num1}}.png"> * <img src="static/image/{{num2}}.png"></h1>
+
+ <br/>
+  <form action="{% url 'multiply' %}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <input type="number" class="form-control" placeholder="type an action" name="answer">
+        <input type="hidden" class="form-control" name="oldnum1" value="{{num1}}">
+        <input type="hidden" class="form-control" name="oldnum2"  value="{{num2}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ {{answer}}
+ </center>
+    
+{% endblock 'content' %}
